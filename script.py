@@ -29,14 +29,13 @@ def writepage(links, datapage, faculty):
 # Set Parameters
 faculty = "acemoglu"
 url = "http://economics.mit.edu/faculty/" + faculty + "/publication/"
-filepath = faculty + ".html"
 datapage = "datapage.csv"
 
 # Download Page
-downloadpage(url, filepath)
+downloadpage(url, faculty + ".html")
 
 # Parse Page
-links = parsepage(filepath)
+links = parsepage(faculty + ".html")
 
 # Write page
 writepage(links, datapage, faculty)
